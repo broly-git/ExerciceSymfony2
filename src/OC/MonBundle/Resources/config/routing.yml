@@ -1,0 +1,20 @@
+mon_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: MonBundle:Default:index }
+
+
+mon_ajouter:
+    path:     /add
+    defaults: { _controller: MonBundle:Default:add }
+
+mon_modif:
+    path:     /edit/{id}
+    defaults: { _controller: MonBundle:Default:edit }
+
+mon_lister:
+    path:     /list
+    defaults: { _controller: MonBundle:Default:list }
+
+mon_delete:
+    path:     /delete/{id}
+    defaults: { _controller: MonBundle:Default:delete }

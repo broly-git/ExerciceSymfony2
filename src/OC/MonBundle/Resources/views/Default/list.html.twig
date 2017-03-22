@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Liste d'apprentis</title>
+	<link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}" />
+    <link rel="stylesheet" href="{{ asset('fonts/glyphicons-halflings-regular.eot') }}" />
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="">
+			  <h2>Liste d'Apprenants</h2>    
+			  <table class="table table-striped">
+			    <thead>
+			      <tr>
+			        <th>ID</th>
+			        <th>NOM</th>
+			        <th>PRENOM</th>
+			        <th>MAIL</th>
+			        <th>TELEPHONE</th>
+			        <th>MODIFIER</th>
+			        <th>SUPRIMER</th>
+			      </tr>
+			    </thead>
+			    <tbody>
+			    {% for app in apprenant %}
+			      <tr>
+			        <td>{{ app.id }}</td>
+			        <td>{{ app.nom }}</td>
+			        <td>{{ app.prenom}}</td>
+			        <td>{{ app.mail }}</td>
+			        <td>{{ app.telephone }}</td>
+			        <td><a href="{{ path('mon_modif', {'id': app.id}) }}"><i class="glyphicon glyphicon-edit"></i></a></td>
+			        <td><a href="{{ path('mon_ajouter', {'id': app.id}) }}"><i class="glyphicon glyphicon-trash"></i></a></td>
+			      </tr>	      
+			    {% endfor %}
+			    </tbody>
+			  </table>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

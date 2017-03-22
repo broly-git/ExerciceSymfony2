@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formulaire d'enregistrement</title>
+    <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/bootstrap-responsive.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/styple.css') }}" />
+    <link rel="stylesheet" href="{{ asset('fonts/glyphicons-halflings-regular.eot') }}" />
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="span8">
+      <h2>Supprimer un apprenant</h2>
+      <p>Etes-vous certain de vouloir supprimer l'annonce "{{ apprenant.nom }}" ?</p>
+        <form action="{{ path('mon_delete', {'id': apprenant.id}) }}" method="post">
+          <input type="submit" value="Supprimer" class="btn btn-danger" />
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

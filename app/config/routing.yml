@@ -1,0 +1,4 @@
+mon:
+    resource: "@MonBundle/Resources/config/routing.yml"
+    prefix:   /
+
